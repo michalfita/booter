@@ -1,0 +1,31 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+*           text=auto
+
+# Source code goes with UNIX line endings
+*.c         text eol=lf
+*.cpp       text eol=lf
+*.h         text eol=lf
+*.hpp       text eol=lf
+*.py        text eol=lf
+*.sh        text eol=lf
+
+# Build tools in UNIX style
+*.qbs       text eol=lf
+*.am        text eol=lf
+Makefile    text eol=lf
+CMake*      text eol=lf
+*.cmake     text eol=lf
+*.pc.in     text eol=lf
+
+# Wiki and support stuff goes in UNIX style as well
+*.md        text eol=lf
+*.yml       text eol=lf
+
+
+# Leave Visual Studio poject files in DOS style.
+*.sln       text eol=crlf
+*.vc*proj   text eol=crlf
+
+# Images are obiously binary
+*.png       binary
+*.jpg       binary

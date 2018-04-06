@@ -1,0 +1,24 @@
+# Visual Studio generated files
+*.ib_pdb_index
+*.idb
+*.ilk
+*.ipch
+*.pdb
+*.suo
+*vcproj.*.*.user
+*.ncb
+*.sdf
+*.opensdf
+# *vcxproj.*
+*.VC.VC.opendb
+*.VC.db
+*.log
+**/*.tlog/**
+
+# Google Test Runner generated files
+*.testdurations
+
+# Binaries
+*.obj
+*.lib
+*.exe
