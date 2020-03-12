@@ -26,6 +26,27 @@ class BootingVictimTwo : public Booter::Bootable<BootingVictimTwo>
 
 BOOTER_BUILDER(Booter::Level::Init, BootingVictimTwo);
 
+class BootingVictimThree : public Booter::StaticBootable<BootingVictimThree> 
+{
+  public:
+    BootingVictimThree(BootingVictimOne& dependency) 
+       : m_dependency(dependency)
+    {}
+
+  private:
+    static BootingVictimThree* BuildInstance()
+    {
+        BootingVictimThree::Build(Booter::Builder<BootingVictimOne>::GetInstance());
+        return &BootingVictimThree::GetInstance();
+    }
+
+    template<class T> friend class Booter::Builder;
+
+    BootingVictimOne m_dependency;
+};
+
+BOOTER_BUILDER(Booter::Level::Init, BootingVictimThree);
+
 namespace Tests
 {
     class TestBooterSystem : public ::testing::Test

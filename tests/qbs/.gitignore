@@ -67,7 +67,10 @@ Thumbs.db
 *.pyc
 
 # Binaries
-# --------
 *.dll
 *.exe
 
+# Building artefacts
+*.obj
+*.ilk
+*.pdb

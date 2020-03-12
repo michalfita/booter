@@ -2,6 +2,7 @@
 
 #include "BooterProvider.h"
 #include "BooterBootable.h"
+#include "BooterStaticBootable.h"
 #include "BooterLevel.h"
 
 namespace Booter

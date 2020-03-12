@@ -22,7 +22,7 @@ namespace Booter
         }
       
       private:
-        template <class T> friend class Builder;
+        template <class R> friend class Builder;
     };
     
     
@@ -32,7 +32,7 @@ namespace Booter
       public:
         Builder<T>(Level level)
         {
-            Provider::GetChain(level).AddNode(this);
+            ::Booter::Provider::GetChain(level).AddNode(this);
         }
         
         static T& GetInstance() { 

@@ -17,6 +17,7 @@ CppApplication {
             "BooterNode.h",
             "BooterProvider.cpp",
             "BooterProvider.h",
+            "BooterStaticBootable.h",
         ]
     }
 
@@ -45,6 +46,7 @@ CppApplication {
             "../../3rd_party/googletest/googletest/include",
             "../../3rd_party/googletest/googletest",
         ]
+        cpp.warningLevel: "none"
     }
 
     files: [
@@ -56,6 +58,8 @@ CppApplication {
     // cpp.warningLevel:       "all"
     cpp.cxxLanguageVersion: "c++14"
     cpp.includePaths:       ["../../src", "../../3rd_party/googletest/googletest/include"]
+    cpp.dynamicLibraries:   [ "pthread" ]
+
 
     Group {     // Properties for the produced executable
         fileTagsFilter: product.type

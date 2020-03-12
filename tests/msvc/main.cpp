@@ -3,7 +3,7 @@
 /// Defines the entry point for the Win32 console application.
 ///
 
-#include "stdafx.h"
+#include "pch.h"
 #include "gtest/gtest.h"
 #include <iostream>
 

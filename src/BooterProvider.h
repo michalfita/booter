@@ -1,6 +1,7 @@
 #pragma once
 
-#include "BooterBootable.h"
+#include "BooterLevel.h"
+#include "BooterChain.h"
 #include <atomic>
 #include <array>
 #include <cassert>

@@ -25,10 +25,18 @@ qbs run
 ```
 Qbs is platform agnostic, so can be successfully used to build on other systems. It's going to use the default compiler on that platform.
 
+##### Troubleshooting
+
+In case of the following error message:
+```
+qbs-windows-x86_64-1.15.0\share\qbs\imports\qbs\Probes\MsvcProbe.qbs:51:16 Error: Detecting the MSVC build environment failed: Cannot find 'vcvarsall.bat'.
+```
+Try to run `qbs-setup-toolchains --system --detect` and then use `qbs build profile:MSVC2019-x64` (or other profile matching your needs)
+
 #### Cross compilation
 
 The code was built using [GNU Arm Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm) with success. Doesn't apply to unit tests.
 
-#### Usage in own project
+## Usage in own project
 
 Just use files from `src` directory as you see fit.
